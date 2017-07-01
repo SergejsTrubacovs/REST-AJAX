@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>College Employees</title>
+	<!-- link rel="shortcut icon" href="images/favicon.ico"-->
+	<link rel="stylesheet" href="style.css">
+	<script src="getEmployee.js"></script>	
+</head>
+
+<body onload="getEmployee()" id="body">
+	<header>
+		<!-- img src="images/logo.jpg" alt="Logo" -->
+		<h1>College Employees</h1>
+		
+    </header>
+    
+    <fieldset id="newEmp">
+    	<h2>New employee info</h2><br>
+    
+		<form action="rest/employees" method="POST">
+			<label for="name">Name</label>
+			<input name="name" />
+			<br/><br/>
+			
+			<label for="surname">Surname</label>
+			<input name="surname" />
+			<br/><br/>
+			
+			<label for="department">Department</label>
+			<input name="department" />
+			<br/><br/>
+			
+			<label for="position">Position</label>
+			<input name="position" />
+			<br/><br/>
+			
+			<label for="rate">Rate</label>
+			<input name="rate" />
+			<br/><br/>
+			
+			<label for="hours">Hours</label>
+			<input name="hours" />
+			<br/><br/>
+			
+			<input type="submit" value="Hire Employee" />
+			<br/><br/>
+		</form>
+	</fieldset>
+	
+	<div class="delete">
+		<h3>Delete employee by Id</h3><br>
+		<label for="id">Employee Id</label>
+		<input type="text" id="id" />
+		<br><br>
+		
+		<input type="button" value="Delete by Id" onclick="deleteEmp()"/>
+		<br><br>
+	</div>
+		
+	<form action="rest/employees" method="GET">	
+		<br><br>
+		
+		<div class="emplist">
+			<main id="main"></main>
+		</div>		
+				<div class="empdetails">
+			<main id="details"></main>
+					</div>		
+			
+	</form>
+	
+</body>
+</html>
