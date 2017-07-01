@@ -13,3 +13,4 @@
 
 # AJAX
   Run on server /A00212878_ClientSide42/WebContent/index.html file or go to http://localhost:8080/A00212878_ClientSide42/index.html in Google Chrome. Clicking on employee name displays his/her details stored in database.
+  Write to and delete from database functionality is working as well.
